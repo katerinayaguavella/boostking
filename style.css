@@ -131,6 +131,10 @@ nav {
 }
 
 /*----------CARDS---------- */
+
+.container {
+  margin-top: 25px;
+}
 .container__cards {
   width: 100%;
   margin: 0 auto;
@@ -162,7 +166,6 @@ nav {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin: 15px;
 }
 .card h2,
 p {
@@ -240,4 +243,36 @@ p {
   #check:checked ~ ul {
     left: 0;
   }
+}
+
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about * {
+  outline: 1px solid red;
+}
+
+.about__img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.about__tittle {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.about__text {
+  width: 1000px;
+  margin: 0 auto;
 }
