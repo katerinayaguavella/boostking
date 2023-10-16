@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  background-image: url(/Assets/imagenes/udyr.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+form {
+  position: relative;
+  background: transparent;
+  border: 0px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 50%;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+form h2 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 35px;
+}
+
+input {
+  padding: 17px;
+  border-radius: 25px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: whitesmoke;
+  outline: none;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: whitesmoke;
+
+  font-size: small;
+}
+
+.btn {
+  background-color: gold;
+  border: 2px solid yellow;
+}
