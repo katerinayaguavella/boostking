@@ -234,11 +234,11 @@ p {
   display: flex;
   justify-content: center;
   max-width: 1200px;
-  flex-wrap: wrap;
   gap: 20px;
   height: 200px;
 }
 .opiniones {
+  border: 3px solid red;
   background-image: url(/Assets/imagenes/lol-fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -250,10 +250,8 @@ p {
 }
 
 .opiniones h2 {
-  color: white;
-  font-size: 30px;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
 }
 
 .user__reseña {
@@ -269,13 +267,22 @@ p {
   border-radius: 50%;
   object-fit: cover;
   width: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .img__valoracion {
   width: 15px;
 }
+.comentarios {
+  width: 100%;
+  font-size: 15px;
+}
+
 /* ------------------------------------------ */
 
 /* ------------MEDIA QUERIES---------- */
