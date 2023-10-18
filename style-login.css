@@ -26,6 +26,8 @@ section::before {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  max-width: 100%;
+  min-height: 100vh;
 }
 
 .conteiner__login {
@@ -54,7 +56,7 @@ section::before {
 
 .input__container {
   position: relative;
-  margin: 30px 0;
+  margin: 50px 0;
   width: 310px;
   border-bottom: 2px solid #fff;
 }
@@ -125,12 +127,12 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 
 .registrarse {
-  font-size: 15px;
+  font-size: 16px;
   color: whitesmoke;
   text-align: center;
   margin: 25px;
@@ -144,4 +146,17 @@ a {
 }
 .registrarse a:hover {
   text-decoration: underline;
+}
+
+/*  MEDIA QUERIES */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .conteiner__login {
+    width: 700px;
+    height: 500px;
+  }
+
+  button {
+    font-size: 17px;
+  }
 }

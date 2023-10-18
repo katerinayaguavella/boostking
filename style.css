@@ -174,6 +174,110 @@ p {
   text-align: center;
 }
 
+/* -------------ABOUT SECCION----------- */
+
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+/* .about * {
+  outline: 1px solid red;
+} */
+
+.main {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.about__picture {
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__img {
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.about__tittle {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.about__text {
+  width: 70%;
+  font-size: medium;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* -------------------------------------------- */
+
+/* SECCION DE RESEÑAS */
+
+.reseñas__container {
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 200px;
+}
+.opiniones {
+  background-image: url(/Assets/imagenes/lol-fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.opiniones h2 {
+  color: white;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.user__reseña {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  width: 350px;
+}
+
+.user__logo {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 8%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.img__valoracion {
+  width: 15px;
+}
+/* ------------------------------------------ */
+
 /* ------------MEDIA QUERIES---------- */
 @media (max-width: 768px) {
   /* HEADER */
@@ -243,36 +347,4 @@ p {
   #check:checked ~ ul {
     left: 0;
   }
-}
-
-.about {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 100px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.about * {
-  outline: 1px solid red;
-}
-
-.about__img {
-  width: 100px;
-  height: 80px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-
-.about__tittle {
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-.about__text {
-  width: 1000px;
-  margin: 0 auto;
 }
