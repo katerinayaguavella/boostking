@@ -10,6 +10,20 @@
   font-family: "Jost", sans-serif;
 }
 
+/* CUSTOM PROPERTIES */
+
+:root {
+  /*  COLORES */
+
+  --color-primario: #3e3159;
+  --color-secundario: #261824;
+  --color--backg: #4480a6;
+
+  /* SOMBRAS */
+  --sombra: 15px 15px 20px rgba(0, 0, 0, 0.2);
+}
+/*  ----------------------------- */
+
 body {
   margin: 0 auto;
   width: 100%;
@@ -18,7 +32,7 @@ body {
   height: 90vh;
   padding: 0 8%;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   background-image: url(/Assets/imagenes/img.jfif);
   background-position: center;
   background-size: cover;
@@ -62,7 +76,7 @@ nav {
 
 .nav__links li a::after {
   content: "";
-  background: #3747a6;
+  background: var(--color--backg);
   width: 0;
   height: 2px;
   position: absolute;
@@ -81,12 +95,11 @@ nav {
   left: 50%;
   top: 50%;
   width: 90%;
-  max-width: 900px;
+  max-width: 1200px;
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
   gap: 15px;
-  max-width: 1200px;
 }
 
 .hero h1 {
@@ -113,7 +126,7 @@ nav {
 /* ------------------BOTONES---------------- */
 
 .btn__login {
-  background-color: #3747a6;
+  background-color: var(--color--backg);
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -132,12 +145,9 @@ nav {
 
 /*----------CARDS---------- */
 
-.container {
-  margin-top: 25px;
-}
 .container__cards {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -146,7 +156,7 @@ nav {
   width: 350px;
   margin: 10px;
   padding: 20px;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3); /* Sombra */
   border-radius: 14px;
 }
 
@@ -158,7 +168,7 @@ nav {
 }
 
 .cover__card img {
-  width: 110%;
+  width: 100%;
 }
 
 .ttl__cards {
@@ -173,22 +183,44 @@ p {
   justify-content: center;
   text-align: center;
 }
-
+.card h2 {
+  font-size: 20px;
+}
+.card p {
+  font-size: 15px;
+  margin-top: 10px;
+}
 /* -------------ABOUT SECCION----------- */
+.container {
+  background-color: var(--color--backg);
+  color: var(--color-secundario);
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
 
 .about {
   max-width: 1200px;
   margin: 0 auto;
-
-  text-align: center;
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-/* .about * {
-  outline: 1px solid red;
-} */
+.beneficio {
+  flex: 0 0 calc(50% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.beneficio h3 {
+  font-size: 18px;
+}
+
+.beneficio p {
+  font-size: 16px;
+}
 
 .main {
   margin-top: 60px;
@@ -206,6 +238,7 @@ p {
   height: 20px;
   object-fit: contain;
   display: block;
+  color: #fff;
 }
 
 .about__tittle {
@@ -223,68 +256,164 @@ p {
 
 /* -------------------------------------------- */
 
-/* SECCION DE RESEÑAS */
+/* CTA */
 
-.reseñas__container {
-  margin: 10px;
-  padding: 15px;
-  text-align: center;
-  position: relative;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+.container__cta {
   max-width: 1200px;
-  gap: 20px;
-  height: 200px;
-}
-.opiniones {
-  border: 3px solid red;
-  background-image: url(/Assets/imagenes/lol-fondo.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 30px;
-  width: 100%;
-}
-
-.opiniones h2 {
-  font-weight: 600;
-  color: #fff;
-}
-
-.user__reseña {
+  margin: 0 auto 20px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  width: 350px;
-}
-
-.user__logo {
-  border-radius: 50%;
-  object-fit: cover;
-  width: 8%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  margin-top: 10px;
 }
 
-.img__valoracion {
-  width: 15px;
+.img__cta {
+  width: 250px;
 }
-.comentarios {
-  width: 100%;
-  font-size: 15px;
+
+.btn__cta {
+  background-color: var(--color-secundario);
+  color: floralwhite;
+  padding: 20px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 25px;
+  box-shadow: var(--sombra);
 }
 
 /* ------------------------------------------ */
 
+/* ---------- RESEÑAS -------------- */
+
+.reseñas {
+  background-color: var(--color-primario);
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.reseñas h2 {
+  font-size: 30px;
+  color: white;
+}
+
+.reseña {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  color: var(--color-secundario);
+  border-radius: 10px;
+  margin: 30px;
+
+  background-color: whitesmoke;
+  box-shadow: var(--sombra);
+}
+.reseña:nth-last-child(3) {
+  justify-content: flex-end;
+}
+
+.reseña img {
+  width: 80px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.reseñas a {
+  background-color: var(--color-secundario);
+  color: floralwhite;
+  padding: 5px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: var(--sombra);
+}
+
+/*  SECCION TRABAJA CON NOSOTROS */
+
+.trabaja__con__nosotros {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.trabaja__con__nosotros h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.trabaja__con__nosotros p {
+  font-size: 18px;
+  margin: 0;
+}
+/* BOTON */
+.btn__trabaja {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color--backg);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+
+/* redes sociales */
+footer {
+  background-color: var(--color-secundario);
+}
+.redes__sociales {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.redes__sociales img {
+  width: 40px;
+  margin: 20px;
+}
+
+/* metodos de pago y logo */
+
+.footer {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin: 0 auto;
+}
+.footer img {
+  width: 200px;
+  margin: 20px;
+}
+/* TERMINOS Y CONDICIONES / POLITICAS */
+
+.term_y_polit {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.term_y_polit p {
+  gap: 50px;
+  color: #f7f7f7;
+  margin: 10px;
+}
+
+.firma {
+  background-color: #fff;
+}
+.firma img {
+  width: 150px;
+}
 /* ------------MEDIA QUERIES---------- */
 @media (max-width: 768px) {
   /* HEADER */
