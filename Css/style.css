@@ -330,7 +330,7 @@ p {
   box-shadow: var(--sombra);
 }
 
-/*  SECCION TRABAJA CON NOSOTROS */
+/* ----------- SECCION TRABAJA CON NOSOTROS -------------*/
 
 .trabaja__con__nosotros {
   max-width: 1200px;
@@ -364,6 +364,12 @@ p {
 }
 
 /* FOOTER */
+.beneficio {
+  flex: 0 0 calc(50% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
 
 /* redes sociales */
 footer {
@@ -411,16 +417,17 @@ footer {
 .firma {
   background-color: #fff;
 }
-.firma img {
-  width: 150px;
-}
 /* ------------MEDIA QUERIES---------- */
 @media (max-width: 768px) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
   /* HEADER */
+
   .header {
     background-image: url(/Assets/imagenes/img.jfif);
     background-repeat: no-repeat;
-    background-size: 1500px 1000px;
     background-origin: padding-box;
     height: 50vh;
   }
@@ -439,10 +446,12 @@ footer {
   }
   .hero a {
     font-size: 15px;
-    background-color: #3747a6;
     color: #fff;
     padding: 8px 25px;
     border-radius: 5px;
+  }
+  .hero a:last-child(1) {
+    background-color: #3e3159;
   }
 
   /* MENU HAMBURGUESA */
@@ -462,7 +471,7 @@ footer {
     position: fixed;
     top: 70px;
     left: 100%;
-    background: black;
+    background: var(--color-secundario);
     width: 100%;
     height: 100vh;
     right: 0;
@@ -483,4 +492,98 @@ footer {
   #check:checked ~ ul {
     left: 0;
   }
+  /* ------------- ABOUT ----------*/
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about article {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .about__picture {
+    text-align: center;
+  }
+
+  .about__img {
+    width: 50px;
+  }
+
+  .about__tittle {
+    font-size: 20px;
+  }
+
+  .about__text {
+    font-size: 16px;
+  }
+  /* ---------CTA------------ */
+  .container__cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img__cta {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .btn__cta {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+  /* -------- RESEÑAS------------ */
+
+  .reseñas {
+    padding: 10px;
+  }
+
+  .reseñas h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .reseña {
+    gap: 10px;
+    margin: 15px;
+  }
+
+  .reseña img {
+    width: 60px;
+    margin: 10px;
+  }
+
+  .reseñas a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+/* ------ TRABAJA CON NOSOTROS---------- */
+.trabaja__con__nosotros {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.img__cta {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.btn__cta {
+  padding: 10px 20px;
+}
+/* -------FOOTER -----------*/
+.redes__sociales img {
+  width: 20px;
+
+  margin: 15px;
+}
+.footer img {
+  width: 150px;
+}
+
+.term_y_polit p {
+  gap: 20px;
+  font-size: 15px;
 }
