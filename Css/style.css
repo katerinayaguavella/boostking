@@ -45,6 +45,12 @@ body {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 /* -------------- NAVBAR--------------------- */
 
@@ -146,7 +152,7 @@ nav {
 /*----------CARDS---------- */
 
 .container__cards {
-  width: 100%;
+  max-width: 1200px;
   margin: 0 auto 50px;
   display: flex;
   flex-wrap: wrap;
@@ -290,6 +296,8 @@ p {
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .reseñas h2 {
@@ -432,6 +440,16 @@ footer {
     height: 50vh;
   }
 
+  /* NAVBAR */
+  nav {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
   /* ---------HERO---------- */
   .hero h1 {
     font-size: 30px;
@@ -461,7 +479,7 @@ footer {
   }
   .menu__icon {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
   }
@@ -479,8 +497,9 @@ footer {
   }
 
   .nav__logo {
-    position: fixed;
+    position: absolute;
     top: 25px;
+    width: 100px;
   }
 
   .nav__links li {
@@ -575,12 +594,12 @@ footer {
 }
 /* -------FOOTER -----------*/
 .redes__sociales img {
-  width: 20px;
+  width: 10px;
 
   margin: 15px;
 }
 .footer img {
-  width: 150px;
+  width: 100px;
 }
 
 .term_y_polit p {
